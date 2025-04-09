@@ -68,17 +68,17 @@ function ProductList() {
         KidRoot Child Fashion Store
       </Typography>
 
-      <Grid container spacing={2} >
+      <Grid container spacing={2} sx={{cursor:"pointer"}} >
         {products.map((product) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={product.id}>
             <StyledCard sx={{width:"100%", maxWidth: "355px", height:'100%', display: "flex", flexDirection: isMobile ? "row" : "column", }}>
               
               <CardMedia
                 component="img" 
-                height={isMobile ? 160 : 250}
+                height={isMobile ? 160 : 260}
                 image={product.image}
                 alt={product.title}
-                sx={{ width: { xs: "43%", sm: "100%" }, objectFit: "contain", backgroundColor: "#fff", padding: 1, borderRadius: 2, border: "1px solid #eee", }}
+                sx={{ width: { xs: "0%", sm: "100%" }, objectFit: "contain", backgroundColor: "#fff", padding: 1, borderRadius: 1, border: "1px solid #eee", }}
               />
 
               <CardContent sx={{ padding: 1, flex: 1, display:"flex", flexDirection: "column",justifyContent: "space-between", }}>
