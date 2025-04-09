@@ -68,30 +68,30 @@ function ProductList() {
         KidRoot Child Fashion Store
       </Typography>
 
-      <Grid container spacing={2} sx={{cursor:"pointer"}} >
+      <Grid container spacing={1} sx={{cursor:"pointer"}} >
         {products.map((product) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={product.id}>
-            <StyledCard sx={{width:"100%", maxWidth: "355px", height:'100%', display: "flex", flexDirection: isMobile ? "row" : "column", }}>
+            <StyledCard sx={{width:"100%", maxWidth: "355px", height: isMobile ? "95%" : "100%", display: "flex", flexDirection: isMobile ? "row" : "column", }}>
               
               <CardMedia
                 component="img" 
                 height={isMobile ? 160 : 260}
                 image={product.image}
                 alt={product.title}
-                sx={{ width: { xs: "0%", sm: "100%" }, objectFit: "contain", backgroundColor: "#fff", padding: 1, borderRadius: 1, border: "1px solid #eee", }}
+                sx={{ width: { xs: "45%", sm: "100%" }, objectFit: "contain", backgroundColor: "#fff", padding: 1, borderRadius: 1, border: "1px solid #eee", }}
               />
 
-              <CardContent sx={{ padding: 1, flex: 1, display:"flex", flexDirection: "column",justifyContent: "space-between", }}>
+              <CardContent sx={{ padding: 1, flex: 1, display:"flex", flexDirection: "column", justifyContent: "space-between", }}>
                 <Typography
                   variant="subtitle1"
-                  sx={{ fontWeight: 600, color: "#333", fontSize: isMobile ? "0.85rem" : "1rem", whiteSpace: "nowrap",
+                  sx={{ fontWeight: 600, color: "#333", fontSize: isMobile ? "0.90rem" : "1rem", whiteSpace: "nowrap",
                     overflow: "hidden",textOverflow: "ellipsis", }}
                 >
                   {product.brand}
                 </Typography>
 
                 <Typography variant="body2" color="textSecondary" sx={{
-                  fontSize: isMobile ? "0.75rem" : "0.875rem",
+                  fontSize: isMobile ? "0.85rem" : "0.875rem",
                   display: "-webkit-box",
                   WebkitBoxOrient: "vertical",
                   WebkitLineClamp: 2,
@@ -108,7 +108,7 @@ function ProductList() {
                     size="small"
                   />
 
-                  <Typography variant="caption" sx={{ ml: 1 }}>
+                  <Typography variant="caption" sx={{ ml: 1.5 }}>
                     ({product.reviews})
                   </Typography>
                 </Box>
