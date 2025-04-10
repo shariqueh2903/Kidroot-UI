@@ -1,0 +1,108 @@
+.main-header {
+    background-color: white !important;
+    z-index: 1000;
+    top: 30px; /* 👈 Push header below TopHeader */
+    position: fixed;
+    width: 100%;
+    padding-top: 30px;
+  }
+  
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Shift logo a bit to the right */
+  .logo-img {
+    height: 65px;
+    margin-left: 90px;
+  }
+  
+  /* All text to black */
+  .logo {
+    font-weight: bold;
+    color: black;
+  }
+  
+  /* Navigation links */
+  .nav-links button {
+    color: black;
+    text-transform: none;
+  }
+  
+  .nav-links .active {
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* Icon section */
+  .icon-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Move Language button to the left in the icon group */
+  .icon-group button:last-child {
+    margin-left: auto;
+    margin-right: 90px;
+  }
+  
+  /* Hamburger icon - default hidden */
+  .mobile-menu-icon {
+    display: none;
+  }
+  
+  /* Left section (logo + hamburger) */
+  .left-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* ----------------------------- */
+  /* Responsive: For mobile only  */
+  /* ----------------------------- */
+  @media (max-width: 768px) {
+    .desktop-only {
+      display: none;
+    }
+  
+    .mobile-menu-icon {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+      color: black;
+      position: relative;
+      z-index: 1100; /* ensure it shows above header */
+    }
+  
+    .logo-img {
+      width: 110px;
+      height: auto;
+      margin-left: 0;
+    }
+  
+    .icon-group {
+      gap: 10px;
+      color: black;
+    }
+  }
+@media (max-width: 768px) {
+    .main-header {
+        padding-top: 15px; /* Add padding for mobile view */
+    }
+}
+.icon-group {
+    margin-left: 150px;
+}
+.MuiListItemIcon-root {
+    min-width: 35px; /* smaller gap between icon and text */
+    color: #444;     /* icon color */
+  }
+  
+  .MuiDrawer-paper {
+    padding-top: 10px;
+  }
+  
