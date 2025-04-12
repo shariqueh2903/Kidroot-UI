@@ -1,0 +1,71 @@
+.toy-appeal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: #fdfdfd;
+  }
+  
+  .toy-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .bg-image {
+    width: 105%;
+    height: auto;
+    display: block;
+    position: relative; /* or absolute if needed */
+    z-index: 1;
+  }
+  
+  .front-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 20;
+  }
+  
+  .toy-content {
+    max-width: 500px;
+  }
+  
+  .toy-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #222;
+  }
+  
+  .feature {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .icon {
+    background-color: #fff0f0;
+    padding: 0.7rem;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    color: #f78da7;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .feature h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: #333;
+  }
+  
+  .feature p {
+    font-size: 0.95rem;
+    color: #666;
+  }
+  
