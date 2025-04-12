@@ -1,0 +1,54 @@
+.top-bar {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    padding: 4px 40px;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1300;
+  }
+  
+  .top-bar-left,
+  .top-bar-center,
+  .top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  /* 👇 Shift email section slightly right */
+  .top-bar-left {
+    margin-left: 60px;
+  }
+  
+  .top-bar-center {
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .social-icon {
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  /* 👇 Cross button closer to icons, not edge */
+  .close-btn {
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 17px;
+    margin-left: 6px;
+    margin-right: 60px; /* Shift it left from edge */
+  }
+@media (max-width: 768px) {
+    .top-bar {
+        display: none;
+    }
+}
+  
