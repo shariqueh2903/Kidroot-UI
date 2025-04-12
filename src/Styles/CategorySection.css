@@ -1,0 +1,123 @@
+.category-section {
+    padding: 4rem 2rem;
+    background-color: #fffdfc;
+    text-align: center;
+  }
+  
+  .category-section h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+    color: #333;
+  }
+  
+  .category-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
+  
+  .category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .category-item:hover {
+    transform: scale(1.08);
+  }
+  
+  .category-circle {
+    width: 160px;
+    height: 160px;
+    background-color: #f9f9f9;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .category-circle img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .category-item span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #444;
+    margin-top: 10px;
+  }
+
+  .highlight-cards {
+    margin-top: 3rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+  }
+  
+  .highlight-card {
+    width: 420px;
+    height: 340px;
+    background-color: #ffece7;
+    padding: 1.8rem;
+    border-radius: 40px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .highlight-card:nth-child(2) {
+    background-color: #ece9ff;
+  }
+  
+  .highlight-card:nth-child(3) {
+    background-color: #e9fff0;
+  }
+  
+  .highlight-card h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .highlight-card p {
+    font-size: 1rem;
+    margin-top: 0.6rem;
+    color: #555;
+  }
+  
+  .highlight-card button {
+    margin-top: auto;
+    padding: 0.6rem 1.2rem;
+    background-color: #ff7a5c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .highlight-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .highlight-card button:hover {
+    background-color: #ff5433;
+  }
+  
+  

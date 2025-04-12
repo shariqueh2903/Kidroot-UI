@@ -1,0 +1,41 @@
+.shop-by-age {
+    text-align: center;
+    margin: 3rem 0;
+  }
+  
+  .shop-by-age h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .age-categories {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .age-card {
+    width: 180px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+    white-space: pre-line;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .age-card:hover {
+    transform: scale(1.05);
+  }
+  
