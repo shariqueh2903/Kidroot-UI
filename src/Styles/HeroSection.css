@@ -1,24 +1,24 @@
-/* Reset and global styles */
+/* Reset some default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+.hero-wrapper {
   font-family: 'Poppins', sans-serif;
-  background-color: #fbfffe;
+  color: #333;
 }
 
-/* Top Bar */
+/* --- Top Bar --- */
 .top-bar {
-  background-color: #fff8f0;
-  padding: 10px 60px;
+  background-color: #faa916;
+  color: white;
+  padding: 8px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
-  width: 100%;
 }
 
 .left-info span,
@@ -28,31 +28,29 @@ body {
 }
 
 .right-icons i {
+  margin-left: 10px;
   cursor: pointer;
 }
 
-/* Navbar */
+/* --- Navbar --- */
 .navbar {
   background-color: white;
-  padding: 15px 60px;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  border-bottom: 1px solid #eee;
+  border-bottom: 2px solid #eee;
 }
 
-/* Logo */
 .logo {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .logo-color {
   color: #faa916;
 }
 
-/* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -64,16 +62,11 @@ body {
   transition: color 0.3s ease;
 }
 
+.nav-links li.active,
 .nav-links li:hover {
   color: #faa916;
 }
 
-.nav-links .active {
-  color: #faa916;
-  font-weight: bold;
-}
-
-/* Navigation Icons */
 .nav-icons {
   display: flex;
   align-items: center;
@@ -82,173 +75,217 @@ body {
 
 .lang-select {
   margin-left: 10px;
+  font-weight: 500;
   cursor: pointer;
 }
 
-/* Hero Slider Wrapper */
+/* --- Hero Section --- */
 .hero-slider-wrapper {
   overflow: hidden;
   width: 100%;
+  position: relative;
 }
 
 .hero-slider {
   display: flex;
-  transition: transform 1s ease-in-out;
-  width: 400%; /* 4 slides, update this accordingly */
+  transition: transform 0.8s ease-in-out;
+  width: 200%; /* Two slides */
 }
 
-/* Hero Slide */
 .hero {
-  flex: 1 0 100%;
+  width: 100vw;
+  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 30px;
+  padding: 40px 80px;
+  box-sizing: border-box;
+  position: relative;
 }
 
+/* Hero content styles */
 .hero-content {
   flex: 1;
-  max-width: 50%;
+  padding-right: 2rem;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .hero-content .offer {
-  color: #faa916;
+  font-size: 24px; /* Increased font size */
+  color: #696969; /* Color for the offer */
   font-weight: 600;
-  font-size: 16px;
+  margin-bottom: 1rem;
 }
 
 .hero-content h1 {
-  font-size: 48px;
+  font-size: 48px; /* Increased font size */
   margin: 10px 0;
-  color: #333;
+  color: #333; /* Dark color for the title */
+  font-weight: bold;
+  line-height: 1.2;
 }
 
-.price {
-  font-size: 20px;
-  margin: 10px 0;
-  color: #555;
+.hero-content .price {
+  font-size: 22px; /* Increased font size */
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #494949; /* Price color */
 }
 
 .shop-btn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #faa916;
-  border: none;
+  background-color: #f0736f;
   color: white;
-  font-size: 16px;
+  border: none;
+  padding: 17px 38px;
+  border-radius: 40px;
+  font-size: 24px;
+  font-weight: 600;
   cursor: pointer;
-  border-radius: 8px;
   transition: background-color 0.3s ease;
 }
 
 .shop-btn:hover {
-  background-color: #e6950e;
+  background-color: #fc6326;
 }
 
-/* Hero Image */
+/* Hero image styles */
 .hero-image {
   flex: 1;
-  max-width: 45%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: right;
 }
 
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-/* Slide Animations */
 .slide-image {
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  animation: slideIn 1s ease forwards;
+  max-width: 80%;
+  height: auto;
+  animation: fadeIn 1s ease-in-out;
 }
 
-@keyframes slideIn {
-  0% {
-    transform: translateX(-50%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  animation: fadeInSlide 1s ease-in-out;
-}
-
-@keyframes fadeInSlide {
+/* --- Fade animation --- */
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
-/* Responsive Design */
+/* --- Clouds --- */
+.clouds {
+  position: absolute;
+  top: 82%;
+  width: 25%;
+}
+
+.cloud-left {
+  left: -95px;
+  rotate: 20deg;
+}
+
+.cloud-right {
+  right: -60px;
+  rotate: -20deg;
+}
+
+.cloud-img {
+  width: 100%;
+  opacity: 3.6;
+  animation: floatClouds 10s infinite ease-in-out;
+}
+
+/* Cloud floating effect */
+@keyframes floatClouds {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* --- Responsive --- */
 @media (max-width: 768px) {
-  .top-bar,
-  .navbar {
-    padding: 10px 20px;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
   .hero {
     flex-direction: column;
     text-align: center;
     padding: 30px 20px;
   }
 
-  .hero-content,
   .hero-image {
-    max-width: 100%;
+    text-align: center;
+    margin-top: 20px;
   }
 
-  .hero-content h1 {
-    font-size: 36px;
+  .slide-image {
+    max-width: 60%;
   }
 
-  .price {
-    font-size: 18px;
+  .nav-links {
+    display: none;
+  }
+
+  .nav-icons {
+    gap: 10px;
+  }
+
+  .top-bar,
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .top-bar .center-info {
+    margin-top: 5px;
   }
 }
 
-.banner-slider {
-  position: relative;
-  width: 100vw;
-  height: auto;
-  overflow: hidden;
-}
-
-.banner-track {
-  display: flex;
-  width: 200vw; /* 2 banners → 200vw, 3 → 300vw */
-  transition: transform 1s ease-in-out;
-}
-
-.banner-container {
-  width: 100vw;
-  flex-shrink: 0;
-}
-
-.banner-img {
+/* Ensure body and root take full width */
+body, html, #root {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  height: auto;
-  object-fit: contain; /* shows full image without crop */
-  display: block;
+  overflow-x: hidden;
 }
 
+/* Wrapper around all slides */
+.hero-slider-wrapper {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Slider track: all slides next to each other */
+.hero-slider {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: 100%;
+}
+
+/* Each individual slide */
+.hero {
+  min-width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+  box-sizing: border-box;
+}
+
+/* Content and image styling */
+.hero-content {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
