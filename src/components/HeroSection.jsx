@@ -58,38 +58,6 @@ function HeroSection() {
 
   return (
     <div className="hero-wrapper">
-      <header className="top-bar">
-        <div className="left-info">
-          <span>📧 info@example.com</span>
-          <span>📞 +000-123-456789</span>
-        </div>
-        <div className="center-info">Welcome to our store</div>
-        <div className="right-icons">
-          <i className="fab fa-facebook-f"></i>
-          <i className="fab fa-instagram"></i>
-          <i className="fab fa-pinterest"></i>
-        </div>
-      </header>
-
-      <nav className="navbar">
-        <div className="logo">
-          <span className="logo-color">Toys</span> TIME
-        </div>
-        <ul className="nav-links">
-          <li className="active">Home</li>
-          <li>Shop +</li>
-          <li>Blog</li>
-          <li>Contact</li>
-          <li>Pages +</li>
-        </ul>
-        <div className="nav-icons">
-          <i className="fas fa-search"></i>
-          <i className="fas fa-heart"></i>
-          <i className="fas fa-shopping-bag"></i>
-          <i className="fas fa-user"></i>
-          <span className="lang-select">English ▾</span>
-        </div>
-      </nav>
 
       <div className="hero-slider-wrapper">
         <div
