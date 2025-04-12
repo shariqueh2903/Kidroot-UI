@@ -10,74 +10,6 @@
   color: #333;
 }
 
-/* --- Top Bar --- */
-.top-bar {
-  background-color: #faa916;
-  color: white;
-  padding: 8px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
-}
-
-.left-info span,
-.center-info,
-.right-icons i {
-  margin-right: 15px;
-}
-
-.right-icons i {
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-/* --- Navbar --- */
-.navbar {
-  background-color: white;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 2px solid #eee;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.logo-color {
-  color: #faa916;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links li {
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.nav-links li.active,
-.nav-links li:hover {
-  color: #faa916;
-}
-
-.nav-icons {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.lang-select {
-  margin-left: 10px;
-  font-weight: 500;
-  cursor: pointer;
-}
 
 /* --- Hero Section --- */
 .hero-slider-wrapper {
@@ -101,12 +33,14 @@
   padding: 40px 80px;
   box-sizing: border-box;
   position: relative;
+  margin-top: 100px;
 }
 
 /* Hero content styles */
 .hero-content {
   flex: 1;
-  padding-right: 2rem;
+  padding-right: 50rem;
+  padding-left: 50px;
   animation: fadeIn 1s ease-in-out;
 }
 
